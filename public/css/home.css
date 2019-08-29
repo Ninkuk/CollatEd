@@ -1,0 +1,252 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.jumbotron-main {
+    /* background: rgba(0, 0, 0, 0.0); */
+    background: url('../images/jumbotron_bg.jpg') no-repeat;
+    background-attachment: fixed;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: static;
+}
+
+.jumbotron-main h1 {
+    font-weight: 700;
+}
+
+#navbar-main {
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.0);
+    font-weight: 500;
+}
+
+#navbar-main a:link {
+    font-weight: 700;
+    text-transform: none;
+    text-align: right;
+}
+
+#navbar-main a:hover {
+    color: #ffffff;
+}
+
+#nav-logo {
+    width: 220px;
+}
+
+#btn-signup {
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #FF9800;
+    color: #ffffff;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
+}
+
+#btn-started {
+    padding: 15px 30px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border-radius: 0px;
+    color: white;
+    background: #1c7dff;
+    text-transform: none;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
+}
+
+#btn-started:hover {
+    color: #1c7dff;
+    background: white;
+}
+
+.modal-content {
+    border-radius: 5px;
+    padding: 0px;
+}
+
+#left {
+    background: linear-gradient(135deg, #2196F3, #29B6F6);
+    min-height: inherit;
+}
+
+#right {
+    padding: 30px 10px;
+}
+
+#right-header {
+    font-weight: 700;
+    color: #2196F3;
+}
+
+#left-header {
+    font-size: 150%;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.display-2 {
+    font-weight: 700;
+}
+
+#search-input {
+    padding: 20px 20px;
+    line-height: 0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 40%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+#search-input:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#search-input:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    color: #ffffff;
+}
+
+#search-button {
+    background-color: #FF9800;
+    border-radius: 5px;
+    color: #ffffff;
+    padding-bottom: 0px;
+}
+
+#jumbotron-img {
+    position: absolute;
+    width: 30%;
+    right: 12%;
+    top: 25%;
+    animation-name: animate-jumbotron;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition-timing-function: ease;
+}
+
+#floor {
+    position: absolute;
+    width: 30%;
+    right: 12%;
+    top: 38%;
+}
+
+@keyframes animate-jumbotron {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px)
+    }
+}
+
+#btn-sign {
+    border-radius: 0px;
+    color: white;
+    background: #1c7dff;
+    text-transform: none;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
+}
+
+#btn-sign:hover {
+    color: #1c7dff;
+    background: white;
+}
+
+#graph {
+    position: relative;
+    top: 20%;
+}
+
+section {
+    margin-top: 75px;
+}
+
+#section-2 {
+    background-color: #1d58a6;
+}
+
+.section-heading-light {
+    font-weight: 700;
+    color: #263238;
+    text-shadow: 1px 4px 0 #e0e0e0;
+}
+
+.section-heading-dark {
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 1px 4px 0 #00000040;
+}
+
+#besthr {
+    background-color: #ffffff;
+}
+
+#movement-section {
+    background-color: #4527A0;
+}
+
+#movement-text h1 {
+    font-weight: 700;
+}
+
+#movement-text p {
+    font-size: 150%;
+}
+
+footer {
+    padding: 100px;
+    background-color: #010431;
+}
+
+footer hr {
+    opacity: 0.5;
+    width: 50px;
+    margin-left: 0px;
+}
+
+footer li {
+    list-style-type: none;
+    padding: 5px 0px;
+}
+
+.contact li {
+    display: inline;
+}
+
+.contact i {
+    position: relative;
+    top: 5px;
+}
+
+#foot-logo {
+    width: 250px;
+}
+
+footer a:link {
+    color: white;
+}
+
+footer a:visited {
+    color: white;
+}
+
+.social {
+    margin-top: 30px;
+}
+
+.social a {
+    padding: 0px 20px;
+}
+
+form {
+    border: solid;
+    border-color: #010431;
+    padding: 45px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
+}
