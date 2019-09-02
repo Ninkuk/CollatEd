@@ -223,11 +223,6 @@ section {
     border-radius: 5px;
 }
 
-#challenge-form {
-    border: none;
-    box-shadow: none;
-}
-
 .custom-file-control,
 .form-control,
 .is-focused .custom-file-control,

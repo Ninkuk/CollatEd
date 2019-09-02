@@ -68,65 +68,75 @@
         <form id="challenge-form">
             <h1 class="display-4 section-heading-light">Submit a challenge</h1>
             <div class="form-group m-0 bmd-form-group">
-                <label for="name" class="bmd-label-floating">Full Name</label>
+                <label for="name" class="bmd-label-floating">Full Name*</label>
                 <input type="text" class="form-control" id="name">
             </div>
             <div class="form-group m-0 bmd-form-group">
-                <label for="institutionName" class="bmd-label-floating">Name of Institution</label>
+                <label for="institutionName" class="bmd-label-floating">Name of Institution*</label>
                 <input type="text" class="form-control" id="institutionName">
             </div>
             <div class="form-group m-0 bmd-form-group">
-                <label for="challengeTitle" class="bmd-label-floating">Challenge Title</label>
+                <label for="challengeTitle" class="bmd-label-floating">Challenge Title*</label>
                 <input type="text" class="form-control" id="challengeTitle">
             </div>
             <div class="dropdown mt-4 row">
-                <p class="col-4 pr-0 mb-0 pt-1 dropdown-title">Associated Academic Disciplines:</p>
+                <p class="col-4 pr-0 mb-0 pt-1 dropdown-title">Associated Academic Disciplines*:</p>
                 <button class="btn btn-secondary dropdown-toggle col-8 pl-0 dropdownMenuButton" type="button"
                     id="discipline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select a discipline
                 </button>
                 <div class="dropdown-menu" aria-labelledby="discipline-button">
-                    <a class="dropdown-item">Social Science</a>
-                    <a class="dropdown-item">Language Skills</a>
-                    <a class="dropdown-item">Mathematics</a>
-                    <a class="dropdown-item">Engineering</a>
-                    <a class="dropdown-item">Biology</a>
-                    <a class="dropdown-item">Chemistry</a>
-                    <a class="dropdown-item">Environmental Studies</a>
-                    <a class="dropdown-item">Physics</a>
-                    <a class="dropdown-item">Art</a>
-                    <a class="dropdown-item">Music</a>
-                    <a class="dropdown-item">Computer Science</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Social Science')">Social Science</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Language Skills')">Language Skills</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Mathematics')">Mathematics</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Engineering')">Engineering</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Biology')">Biology</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Chemistry')">Chemistry</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Environmental Studies')">Environmental
+                        Studies</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Physics')">Physics</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Art')">Art</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Music')">Music</a>
+                    <a class="dropdown-item" onclick="selectDiscipline('Computer Science')">Computer Science</a>
                 </div>
             </div>
             <div class="dropdown mt-4 row">
-                <p class="col-4 pr-0 mb-0 pt-1 dropdown-title">Associated SDG Goal(s):</p>
+                <p class="col-4 pr-0 mb-0 pt-1 dropdown-title">Associated SDG Goal(s)*:</p>
                 <button class="btn btn-secondary dropdown-toggle col-8 pl-0 dropdownMenuButton" type="button"
                     id="goal-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select a SDG Goal
                 </button>
                 <div class="dropdown-menu" aria-labelledby="goal-button">
-                    <a class="dropdown-item">No Poverty</a>
-                    <a class="dropdown-item">Zero Hunger</a>
-                    <a class="dropdown-item">Good Health and Well-being</a>
-                    <a class="dropdown-item">Quality Education</a>
-                    <a class="dropdown-item">Gender Equality</a>
-                    <a class="dropdown-item">Clean Water and Sanitation</a>
-                    <a class="dropdown-item">Affordable and Clean Energy</a>
-                    <a class="dropdown-item">Decent Work and Economic Growth</a>
-                    <a class="dropdown-item">Industry, Innovation and Infrastructure</a>
-                    <a class="dropdown-item">Reduced Inequality</a>
-                    <a class="dropdown-item">Sustainable Cities and Communities</a>
-                    <a class="dropdown-item">Responsible Consumption and Production</a>
-                    <a class="dropdown-item">Climate Action</a>
-                    <a class="dropdown-item">Life Below Water</a>
-                    <a class="dropdown-item">Life on Land</a>
-                    <a class="dropdown-item">Peace and Justice Strong Institutions</a>
-                    <a class="dropdown-item">Partnerships to achieve the Goal</a>
+                    <a class="dropdown-item" onclick="selectGoal('No Poverty')">No Poverty</a>
+                    <a class="dropdown-item" onclick="selectGoal('Zero Hunger')">Zero Hunger</a>
+                    <a class="dropdown-item" onclick="selectGoal('Good Health and Well-being')">Good Health and
+                        Well-being</a>
+                    <a class="dropdown-item" onclick="selectGoal('Quality Education')">Quality Education</a>
+                    <a class="dropdown-item" onclick="selectGoal('Gender Equality')">Gender Equality</a>
+                    <a class="dropdown-item" onclick="selectGoal('Clean Water and Sanitation')">Clean Water and
+                        Sanitation</a>
+                    <a class="dropdown-item" onclick="selectGoal('Affordable and Clean Energy')">Affordable and Clean
+                        Energy</a>
+                    <a class="dropdown-item" onclick="selectGoal('Decent Work and Economic Growth')">Decent Work and
+                        Economic Growth</a>
+                    <a class="dropdown-item" onclick="selectGoal('Industry, Innovation and Infrastructure')">Industry,
+                        Innovation and Infrastructure</a>
+                    <a class="dropdown-item" onclick="selectGoal('Reduced Inequality')">Reduced Inequality</a>
+                    <a class="dropdown-item" onclick="selectGoal('Sustainable Cities and Communities')">Sustainable
+                        Cities and Communities</a>
+                    <a class="dropdown-item" onclick="selectGoal('Responsible Consumption and Production')">Responsible
+                        Consumption and Production</a>
+                    <a class="dropdown-item" onclick="selectGoal('Climate Action')">Climate Action</a>
+                    <a class="dropdown-item" onclick="selectGoal('Life Below Water')">Life Below Water</a>
+                    <a class="dropdown-item" onclick="selectGoal('Life on Land')">Life on Land</a>
+                    <a class="dropdown-item" onclick="selectGoal('Peace and Justice Strong Institutions')">Peace and
+                        Justice Strong Institutions</a>
+                    <a class="dropdown-item" onclick="selectGoal('Partnerships to achieve the Goal')">Partnerships to
+                        achieve the Goal</a>
                 </div>
             </div>
             <div class="form-group m-0 bmd-form-group">
-                <label for="problemDescription" class="bmd-label-floating">Description of problem</label>
+                <label for="problemDescription" class="bmd-label-floating">Description of problem*</label>
                 <textarea class="form-control" id="problemDescription" rows="5"></textarea>
             </div>
             <div class="form-group m-0 bmd-form-group">
@@ -135,15 +145,22 @@
                 <textarea class="form-control" id="organizationDescription" rows="5"></textarea>
             </div>
             <div class="form-group m-0 bmd-form-group">
-                <label for="guidelinesDescription" class="bmd-label-floating">Guidelines and Limits</label>
+                <label for="guidelinesDescription" class="bmd-label-floating">Guidelines and Limits*</label>
                 <textarea class="form-control" id="guidelinesDescription" rows="5"></textarea>
             </div>
             <div class="form-group m-0 bmd-form-group">
-                <label for="resources" class="bmd-label-floating">Resources</label>
+                <label for="resources" class="bmd-label-floating">Resources*</label>
                 <textarea class="form-control" id="resources" rows="5"></textarea>
             </div>
+            <p class="mt-5 text-muted">*required fields</p>
             <button type="submit" class="btn btn-raised mt-5" id="btn-submit">Submit</button>
         </form>
+
+        <div id="thanks-message" class="text-center">
+            <h1 class="display-3 section-heading-light text-center mb-5">Thank you for submitting the
+                form!</h1>
+            <a href="index.html">Back to home</a>
+        </div>
 
     </section>
 
