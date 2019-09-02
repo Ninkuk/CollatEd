@@ -21,8 +21,11 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <title>Collated Lab | Home</title>
+
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
+    <title>Collated Lab | Submit Challenges</title>
 </head>
 
 <body>
@@ -48,139 +51,102 @@
                         </div>
                         <a class="nav-item nav-link" href="about.html">iWorld</a>
                         <a class="nav-item nav-link" href="about.html">Blog</a>
-                        <a class="nav-item nav-link btn btn-raised" href="challenges.html" id="btn-signup">Challenges</a>
+                        <a class="nav-item nav-link btn btn-raised" href="challenges.html"
+                            id="btn-signup">Challenges</a>
                     </div>
                 </div>
             </div>
         </nav>
         <div class="container my-3 py-5">
-            <h1 class="display-1 text-white">Solve Young,<br>Solve <span id="typed"></span>.</h1>
-            <a class="btn btn-raised btn-lg" href="#" id="btn-started">Let's Get Started</a>
+            <h1 class="display-1 text-white text-center">Challenges</h1>
         </div>
     </div>
 
-    <section class="container">
-        <p class="lead">Welcome to the era of Massive Open Online Discovery (MOOD)! CollatEd is a worldwide education
-            reform movement for Emerging Student Innovators, including the enforcement of UN Education Sustainable
-            Development goals, the promotion of open innovation,
-            and the virtual connection of the knowledge systems in society.</p>
-    </section>
 
-    <section class="container" id="section-2">
-        <div class="row">
-            <div class="col-6 py-5 px-5">
-                <!-- <h1 class="display-2 section-heading-dark">PASS UNIVERSAL BACKGROUND CHECKS</h1> -->
-                <p class="lead text-white mt-4">Online courses’ shift in focus to degree certificates opens up a gap for
-                    youth to further decentralize the research and innovative purposes of traditional academia. Learners
-                    shouldn’t have to continue processing information to achieve
-                    standardized validation; instead, we must bring up the idea-to-impact ratio in education.</p>
-                <a class="btn btn-raised btn-lg mt-5" href="#" id="btn-sign">Read More</a>
-            </div>
-            <div class="col-6 p-0 m-0">
-                <img width="100%"
-                    src="images/Collated front.jpg"
-                    alt="section-immage">
-            </div>
-        </div>
-    </section>
+    <section class="container mb-5" id="form-container">
 
-    <section class="container">
-        <h1 class="display-2 section-heading-light">Our Partners</h1>
-        <hr>
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 text-center">
-                <a href="https://www.crunchbase.com/organization/electus-global-education-co-inc#section-overview"
-                    target="_blank"><img src="images/partner_1_before.png" alt="partner 1 logo"
-                        onmouseover="this.src='images/partner_1_after.png'"
-                        onmouseout="this.src='images/partner_1_before.png'"></a>
+        <form id="challenge-form">
+            <h1 class="display-4 section-heading-light">Submit a challenge</h1>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="name" class="bmd-label-floating">Full Name</label>
+                <input type="text" class="form-control" id="name">
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 text-center">
-                <a href="https://www.undp.org/content/undp/en/home.html" target="_blank"><img
-                        src="images/partner_2_before.png" alt="partner 2 logo"
-                        onmouseover="this.src='images/partner_2_after.png'"
-                        onmouseout="this.src='images/partner_2_before.png'"></a>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="institutionName" class="bmd-label-floating">Name of Institution</label>
+                <input type="text" class="form-control" id="institutionName">
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 text-center">
-                <a href="https://www.cde.ca.gov/be/" target="_blank"><img src="images/partner_3_before.png"
-                        alt="partner 3 logo" onmouseover="this.src='images/partner_3_after.png'"
-                        onmouseout="this.src='images/partner_3_before.png'"></a>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="challengeTitle" class="bmd-label-floating">Challenge Title</label>
+                <input type="text" class="form-control" id="challengeTitle">
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 text-center">
-                <a href="https://www.linkedin.com/company/vietnamese-youth-cooperation-organization"
-                    target="_blank"><img src="images/partner_4_before.png" alt="partner 4 logo"
-                        onmouseover="this.src='images/partner_4_after.png'"
-                        onmouseout="this.src='images/partner_4_before.png'"></a>
-            </div>
-        </div>
-    </section>
-
-    <section class="container-fluid py-5" id="movement-section">
-        <div class="container">
-            <h1 class="display-2 section-heading-dark">Our Movement</h1>
-            <hr id="besthr">
-            <div class="row my-5">
-                <div class="col-2 text-center">
-                    <img src="https://img.icons8.com/ios/150/ffffff/light-on.png" alt="bulb">
-                </div>
-                <div class="col-10 text-white" id="movement-text">
-                    <h1>Real-World Challenges</h1>
-                    <p>Take on problems posted by influencial social institutions from academia and industry. Perfect
-                        final projects for classrooms.</p>
+            <div class="dropdown mt-4 row">
+                <p class="col-4 pr-0 mb-0 pt-1 dropdown-title">Associated Academic Disciplines:</p>
+                <button class="btn btn-secondary dropdown-toggle col-8 pl-0 dropdownMenuButton" type="button"
+                    id="discipline-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a discipline
+                </button>
+                <div class="dropdown-menu" aria-labelledby="discipline-button">
+                    <a class="dropdown-item">Social Science</a>
+                    <a class="dropdown-item">Language Skills</a>
+                    <a class="dropdown-item">Mathematics</a>
+                    <a class="dropdown-item">Engineering</a>
+                    <a class="dropdown-item">Biology</a>
+                    <a class="dropdown-item">Chemistry</a>
+                    <a class="dropdown-item">Environmental Studies</a>
+                    <a class="dropdown-item">Physics</a>
+                    <a class="dropdown-item">Art</a>
+                    <a class="dropdown-item">Music</a>
+                    <a class="dropdown-item">Computer Science</a>
                 </div>
             </div>
-            <div class="row my-5">
-                <div class="col-2 text-center">
-                    <img class="text-center" src="https://img.icons8.com/ios/150/ffffff/groups.png" alt="people">
-                </div>
-                <div class="col-10 text-white" id="movement-text">
-                    <h1>Hubs</h1>
-                    <p>Form virtual teams in chatroom-like environments with tools and instruction to remix ideas.</p>
-                </div>
-            </div>
-            <div class="row my-5">
-                <div class="col-2 text-center">
-                    <img src="https://img.icons8.com/ios/150/ffffff/megaphone.png" alt="megaphone">
-                </div>
-                <div class="col-10 text-white" id="movement-text">
-                    <h1>Action</h1>
-                    <p>Wrap your ideas in a finished product for recognition.</p>
-                </div>
-            </div>
-            <div class="row my-5">
-                <div class="col-2 text-center">
-                    <img src="https://img.icons8.com/ios/150/ffffff/internet.png" alt="world">
-                </div>
-                <div class="col-10 text-white" id="movement-text">
-                    <h1>iWorld</h1>
-                    <p>Think big. Respond to policy-guided questions posted by those who set the trend.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h1 class="display-2 section-heading-light">Join the movement</h1>
-        <hr>
-        <form class="my-5">
-            <div class="row form-group px-3">
-                <div class="col-6 py-3">
-                    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="First Name">
-                </div>
-                <div class="col-6 py-3">
-                    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Last Name">
+            <div class="dropdown mt-4 row">
+                <p class="col-4 pr-0 mb-0 pt-1 dropdown-title">Associated SDG Goal(s):</p>
+                <button class="btn btn-secondary dropdown-toggle col-8 pl-0 dropdownMenuButton" type="button"
+                    id="goal-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a SDG Goal
+                </button>
+                <div class="dropdown-menu" aria-labelledby="goal-button">
+                    <a class="dropdown-item">No Poverty</a>
+                    <a class="dropdown-item">Zero Hunger</a>
+                    <a class="dropdown-item">Good Health and Well-being</a>
+                    <a class="dropdown-item">Quality Education</a>
+                    <a class="dropdown-item">Gender Equality</a>
+                    <a class="dropdown-item">Clean Water and Sanitation</a>
+                    <a class="dropdown-item">Affordable and Clean Energy</a>
+                    <a class="dropdown-item">Decent Work and Economic Growth</a>
+                    <a class="dropdown-item">Industry, Innovation and Infrastructure</a>
+                    <a class="dropdown-item">Reduced Inequality</a>
+                    <a class="dropdown-item">Sustainable Cities and Communities</a>
+                    <a class="dropdown-item">Responsible Consumption and Production</a>
+                    <a class="dropdown-item">Climate Action</a>
+                    <a class="dropdown-item">Life Below Water</a>
+                    <a class="dropdown-item">Life on Land</a>
+                    <a class="dropdown-item">Peace and Justice Strong Institutions</a>
+                    <a class="dropdown-item">Partnerships to achieve the Goal</a>
                 </div>
             </div>
-            <div class="form-group px-3 py-3">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="problemDescription" class="bmd-label-floating">Description of problem</label>
+                <textarea class="form-control" id="problemDescription" rows="5"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary py-3">Submit</button>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="organizationDescription" class="bmd-label-floating">Description of organization
+                    (optional)</label>
+                <textarea class="form-control" id="organizationDescription" rows="5"></textarea>
+            </div>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="guidelinesDescription" class="bmd-label-floating">Guidelines and Limits</label>
+                <textarea class="form-control" id="guidelinesDescription" rows="5"></textarea>
+            </div>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="resources" class="bmd-label-floating">Resources</label>
+                <textarea class="form-control" id="resources" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-raised mt-5" id="btn-submit">Submit</button>
         </form>
+
     </section>
+
 
     <footer>
         <div class="container">
@@ -270,14 +236,28 @@
         });
     </script>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
     <script>
-        var typed = new Typed('#typed', {
-            strings: ["Strong", "Challenges", "Education"],
-            loop: true,
-            backSpeed: 60,
-            typeSpeed: 60
-        });
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBDulXsaEQdMDC-VmEgCeC0gH2IFsytB8M",
+            authDomain: "collatedlab-97dc3.firebaseapp.com",
+            databaseURL: "https://collatedlab-97dc3.firebaseio.com",
+            projectId: "collatedlab-97dc3",
+            storageBucket: "collatedlab-97dc3.appspot.com",
+            messagingSenderId: "1060213815598",
+            appId: "1:1060213815598:web:f68a5f39e255eb31"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
     </script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>

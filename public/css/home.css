@@ -6,7 +6,7 @@ body {
     /* background: rgba(0, 0, 0, 0.0); */
     background: url('../images/jumbotron_bg.jpg') no-repeat;
     background-attachment: fixed;
-    background-position: left bottom;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     position: static;
@@ -14,6 +14,7 @@ body {
 
 .jumbotron-main h1 {
     font-weight: 700;
+    font-size: 500%;
 }
 
 #navbar-main {
@@ -32,6 +33,11 @@ body {
     color: #ffffff;
 }
 
+#dropdown-nav a:hover {
+    color: #010431;
+    text-decoration: underline;
+}
+
 #nav-logo {
     width: 220px;
 }
@@ -43,6 +49,15 @@ body {
     background-color: #FF9800;
     color: #ffffff;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
+}
+
+#btn-submit {
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #FF9800;
+    color: #ffffff;
+    width: 100%;
+    font-size: 100%;
 }
 
 #btn-started {
@@ -140,8 +155,9 @@ body {
     from {
         transform: translateY(0);
     }
+
     to {
-        transform: translateY(-10px)
+        transform: translateY(-10px);
     }
 }
 
@@ -183,6 +199,10 @@ section {
     text-shadow: 1px 4px 0 #00000040;
 }
 
+#innovation-model {
+    width: 100%;
+}
+
 #besthr {
     background-color: #ffffff;
 }
@@ -197,6 +217,39 @@ section {
 
 #movement-text p {
     font-size: 150%;
+}
+
+#form-container {
+    border-radius: 5px;
+}
+
+#challenge-form {
+    border: none;
+    box-shadow: none;
+}
+
+.custom-file-control,
+.form-control,
+.is-focused .custom-file-control,
+.is-focused .form-control {
+    background-image: linear-gradient(0deg, #FF9800 2px, rgba(0, 150, 136, 0) 0), linear-gradient(0deg, rgba(0, 0, 0, .26) 1px, transparent 0);
+}
+
+.is-focused [class*=" bmd-label"],
+.is-focused [class^="bmd-label"] {
+    color: #FF9800;
+}
+
+.dropdown-title{
+    color: rgba(0,0,0,.26);
+}
+
+.dropdownMenuButton{
+    text-align: left;
+}
+
+.dropdown-menu .dropdown-item{
+    max-width: 500px;
 }
 
 footer {
@@ -234,6 +287,10 @@ footer a:link {
 
 footer a:visited {
     color: white;
+}
+
+.footer-bottom {
+    background-color: #FF9800;
 }
 
 .social {
