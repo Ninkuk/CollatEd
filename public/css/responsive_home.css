@@ -1,0 +1,56 @@
+/* Extra Small devices (portrait phones, 575px and below) */
+@media (max-width: 575px) {
+    #jumbotron-container h1 {
+        font-size: 2.0em;
+    }
+    #form-selection{
+        text-align: center !important;
+    }
+    #form-selection h1{
+        font-size: 2.5em;
+    }
+    #form-selection h4{
+        text-align: center !important;
+    }
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 576px) {
+    #jumbotron-container h1 {
+        font-size: 3.5em;
+    }
+    #form-selection{
+        text-align: center !important;
+    }
+    #form-selection h4{
+        text-align: center !important;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (max-width: 768px) {
+    #form-selection{
+        text-align: center !important;
+    }
+    #form-selection h4{
+        text-align: center !important;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    
+}

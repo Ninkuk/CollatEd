@@ -18,6 +18,7 @@
 
     <!-- Custom CSS Bootstrap Override -->
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive_home.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
@@ -57,7 +58,7 @@
                 </div>
             </div>
         </nav>
-        <div class="container my-3 py-5">
+        <div class="container my-3 py-5" id="jumbotron-container">
             <h1 class="display-1 text-white">Solve Young,<br>Solve <span id="typed"></span>.</h1>
             <a class="btn btn-raised btn-lg" href="challenges.html" id="btn-started">Let's Get Started</a>
         </div>
@@ -72,7 +73,7 @@
 
     <section class="container" id="section-2">
         <div class="row">
-            <div class="col-6 py-5 px-5">
+            <div class="col-md-6 py-5 px-5">
                 <!-- <h1 class="display-2 section-heading-dark">PASS UNIVERSAL BACKGROUND CHECKS</h1> -->
                 <p class="lead text-white mt-4">Online courses’ shift in focus to degree certificates opens up a gap for
                     youth to further decentralize the research and innovative purposes of traditional academia. Learners
@@ -80,7 +81,7 @@
                     standardized validation; instead, we must bring up the idea-to-impact ratio in education.</p>
                 <a class="btn btn-raised btn-lg mt-5" href="mission.html" id="btn-sign">Read More</a>
             </div>
-            <div class="col-6 p-0 m-0">
+            <div class="col-md-6 p-0 m-0">
                 <img width="100%" src="images/Collated front.jpg" alt="section-immage">
             </div>
         </div>
@@ -121,38 +122,38 @@
             <h1 class="display-2 section-heading-dark">Our Movement</h1>
             <hr id="besthr">
             <div class="row my-5">
-                <div class="col-2 text-center">
+                <div class="col-lg-2 text-center">
                     <img src="https://img.icons8.com/ios/150/ffffff/light-on.png" alt="bulb">
                 </div>
-                <div class="col-10 text-white" id="movement-text">
+                <div class="col-lg-10 text-white" id="movement-text">
                     <h1>Real-World Challenges</h1>
                     <p>Take on problems posted by influencial social institutions from academia and industry. Perfect
                         final projects for classrooms.</p>
                 </div>
             </div>
             <div class="row my-5">
-                <div class="col-2 text-center">
+                <div class="col-lg-2 text-center">
                     <img class="text-center" src="https://img.icons8.com/ios/150/ffffff/groups.png" alt="people">
                 </div>
-                <div class="col-10 text-white" id="movement-text">
+                <div class="col-lg-10 text-white" id="movement-text">
                     <h1>Hubs</h1>
                     <p>Form virtual teams in chatroom-like environments with tools and instruction to remix ideas.</p>
                 </div>
             </div>
             <div class="row my-5">
-                <div class="col-2 text-center">
+                <div class="col-lg-2 text-center">
                     <img src="https://img.icons8.com/ios/150/ffffff/megaphone.png" alt="megaphone">
                 </div>
-                <div class="col-10 text-white" id="movement-text">
+                <div class="col-lg-10 text-white" id="movement-text">
                     <h1>Action</h1>
                     <p>Wrap your ideas in a finished product for recognition.</p>
                 </div>
             </div>
             <div class="row my-5">
-                <div class="col-2 text-center">
+                <div class="col-lg-2 text-center">
                     <img src="https://img.icons8.com/ios/150/ffffff/internet.png" alt="world">
                 </div>
-                <div class="col-10 text-white" id="movement-text">
+                <div class="col-lg-10 text-white" id="movement-text">
                     <h1>iWorld</h1>
                     <p>Think big. Respond to policy-guided questions posted by those who set the trend.</p>
                 </div>
@@ -163,11 +164,11 @@
     <section class="container mb-5">
         <h1 class="display-2 section-heading-light">Join the movement</h1>
         <form class="row" id="join-form">
-            <div class="form-group pl-0 bmd-form-group col-6">
+            <div class="form-group pl-0 bmd-form-group col-sm-6">
                 <label for="name" class="bmd-label-floating">Full Name</label>
                 <input type="text" class="form-control" id="name">
             </div>
-            <div class="form-group pl-0 bmd-form-group col-6">
+            <div class="form-group pl-0 bmd-form-group col-sm-6">
                 <label for="email" class="bmd-label-floating">Email Address</label>
                 <input type="email" class="form-control" id="email">
             </div>
@@ -175,10 +176,10 @@
         </form>
     </section>
 
-    <footer>
+    <footer class="mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-5 pr-5">
+                <div class="col-lg-5 pr-5">
                     <img src="images/logo_light.png" alt="logo" id="foot-logo">
                     <hr class="bg-white mt-4">
                     <p class="my-4 text-white">
@@ -208,8 +209,8 @@
                                 onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/youtube-play.png'"></a>
                     </div> -->
                 </div>
-                <div class="col-3">
-                    <div class="links mt-3 ml-3">
+                <div class="col-lg-3">
+                    <div class="links mt-5 mt-lg-3 ml-lg-3" id="navigation-menu">
                         <h3 class="text-white">Navigation</h1>
                             <hr class="bg-white mt-4">
                             <ul class="mt-4 px-0">
@@ -222,7 +223,7 @@
                             </ul>
                     </div>
                 </div>
-                <div class="col-4 mt-3 pl-3 contact">
+                <div class="col-lg-4 mt-5 mt-lg-3 pl-3 contact" id="contact">
                     <h3 class="text-white">Contact</h3>
                     <hr class="bg-white mt-4">
                     <ul class="mt-4 px-0 text-white">
@@ -230,7 +231,7 @@
                             <p><i class="material-icons">home</i>&nbsp; 1234 N Random St, AZ 12345</p>
                         </li> -->
                         <li>
-                            <p><i class="material-icons">email</i>&nbsp; <a href="mailto:">collatedlab@gmail.com</a></p>
+                            <p><i class="material-icons">email</i>&nbsp; <a href="mailto:collatedlab@gmail.com">collatedlab@gmail.com</a></p>
                         </li>
                         <!-- <li>
                             <p><i class="material-icons">call</i>&nbsp; <a href="mailto:">+1 (234) 456-7890</a></p>

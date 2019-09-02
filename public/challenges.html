@@ -18,6 +18,7 @@
 
     <!-- Custom CSS Bootstrap Override -->
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive_home.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
@@ -57,11 +58,11 @@
                 </div>
             </div>
         </nav>
-        <div class="container my-3 py-5">
+        <div class="container my-3 py-5" id="form-selection">
             <h1 class="display-1 text-white text-center">Challenges</h1>
             <div class="row mt-5">
-                <h4 class="display-4 text-white col-7 px-0 mt-0 text-right">I would like to submit a </h4>
-                <div id="dropdown-div" class="dropdown col-5 px-0">
+                <h4 class="display-4 text-white col-md-7 px-0 mt-0 text-right">I would like to submit a </h4>
+                <div id="dropdown-div" class="dropdown col-md-5 px-0">
                     <button id="dropdown-btn" class="btn btn-secondary dropdown-toggle py-0 my-0" type="button"
                         id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <h4 id="dropdown-selected" class="my-0 text-white display-4">Challenge</h4>
@@ -222,10 +223,10 @@
     </section>
 
 
-    <footer>
+    <footer class="mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-5 pr-5">
+                <div class="col-lg-5 pr-5">
                     <img src="images/logo_light.png" alt="logo" id="foot-logo">
                     <hr class="bg-white mt-4">
                     <p class="my-4 text-white">
@@ -235,28 +236,28 @@
                         the virtual connection of the knowledge systems in society.
                     </p>
                     <!-- <div class="social">
-                            <a href="https://facebook.com/paolettis.kitchen.7" class="sociallogo" target="_blank"
-                                style="padding-left: 0"><img src="https://png.icons8.com/ios/36/ffffff/facebook.png"
-                                    alt="Facebook Logo"
-                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/facebook.png'"
-                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/facebook.png'"></a>
-                            <a href="https://twitter.com/KitchenPaoletti" class="sociallogo" target="_blank"><img
-                                    src="https://png.icons8.com/ios/36/ffffff/twitter.png" alt="Twitter Logo"
-                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/twitter.png'"
-                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/twitter.png'"></a>
-                            <a href="https://www.instagram.com/collatedlab/" class="sociallogo" target="_blank"><img
-                                    src="https://png.icons8.com/ios/36/ffffff/instagram-new.png" alt="Instagram Logo"
-                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/instagram-new.png'"
-                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/instagram-new.png'"></a>
-                            <a href="https://www.youtube.com/channel/UCetr1ndjTt4md80vra10YCQ?sub_confirmation=1"
-                                class="sociallogo" target="_blank"><img
-                                    src="https://png.icons8.com/ios/36/ffffff/youtube-play.png" alt="Instagram Logo"
-                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/youtube-play.png'"
-                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/youtube-play.png'"></a>
-                        </div> -->
+                        <a href="https://facebook.com/paolettis.kitchen.7" class="sociallogo" target="_blank"
+                            style="padding-left: 0"><img src="https://png.icons8.com/ios/36/ffffff/facebook.png"
+                                alt="Facebook Logo"
+                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/facebook.png'"
+                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/facebook.png'"></a>
+                        <a href="https://twitter.com/KitchenPaoletti" class="sociallogo" target="_blank"><img
+                                src="https://png.icons8.com/ios/36/ffffff/twitter.png" alt="Twitter Logo"
+                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/twitter.png'"
+                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/twitter.png'"></a>
+                        <a href="https://www.instagram.com/collatedlab/" class="sociallogo" target="_blank"><img
+                                src="https://png.icons8.com/ios/36/ffffff/instagram-new.png" alt="Instagram Logo"
+                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/instagram-new.png'"
+                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/instagram-new.png'"></a>
+                        <a href="https://www.youtube.com/channel/UCetr1ndjTt4md80vra10YCQ?sub_confirmation=1"
+                            class="sociallogo" target="_blank"><img
+                                src="https://png.icons8.com/ios/36/ffffff/youtube-play.png" alt="Instagram Logo"
+                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/youtube-play.png'"
+                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/youtube-play.png'"></a>
+                    </div> -->
                 </div>
-                <div class="col-3">
-                    <div class="links mt-3 ml-3">
+                <div class="col-lg-3">
+                    <div class="links mt-5 mt-lg-3 ml-lg-3" id="navigation-menu">
                         <h3 class="text-white">Navigation</h1>
                             <hr class="bg-white mt-4">
                             <ul class="mt-4 px-0">
@@ -269,19 +270,20 @@
                             </ul>
                     </div>
                 </div>
-                <div class="col-4 mt-3 pl-3 contact">
+                <div class="col-lg-4 mt-5 mt-lg-3 pl-3 contact" id="contact">
                     <h3 class="text-white">Contact</h3>
                     <hr class="bg-white mt-4">
                     <ul class="mt-4 px-0 text-white">
                         <!-- <li>
-                                <p><i class="material-icons">home</i>&nbsp; 1234 N Random St, AZ 12345</p>
-                            </li> -->
+                            <p><i class="material-icons">home</i>&nbsp; 1234 N Random St, AZ 12345</p>
+                        </li> -->
                         <li>
-                            <p><i class="material-icons">email</i>&nbsp; <a href="mailto:">collatedlab@gmail.com</a></p>
+                            <p><i class="material-icons">email</i>&nbsp; <a
+                                    href="mailto:collatedlab@gmail.com">collatedlab@gmail.com</a></p>
                         </li>
                         <!-- <li>
-                                <p><i class="material-icons">call</i>&nbsp; <a href="mailto:">+1 (234) 456-7890</a></p>
-                            </li> -->
+                            <p><i class="material-icons">call</i>&nbsp; <a href="mailto:">+1 (234) 456-7890</a></p>
+                        </li> -->
                         <li>
                             <p><img src="https://png.icons8.com/ios/24/ffffff/instagram-new.png" alt="Instagram Logo"
                                     style="padding-left: 0;">
