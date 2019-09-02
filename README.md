@@ -1,2 +1,2 @@
-#CollatEd Lab
+# CollatEd Lab
 https://www.collatedlab.com/
