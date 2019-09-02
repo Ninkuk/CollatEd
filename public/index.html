@@ -22,6 +22,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
     <title>Collated Lab | Home</title>
 </head>
 
@@ -46,16 +49,17 @@
                                 <a class="dropdown-item" href="mission.html">Our Mission</a>
                             </div>
                         </div>
-                        <a class="nav-item nav-link" href="about.html">iWorld</a>
-                        <a class="nav-item nav-link" href="about.html">Blog</a>
-                        <a class="nav-item nav-link btn btn-raised" href="challenges.html" id="btn-signup">Challenges</a>
+                        <a class="nav-item nav-link" href="blog.html">Blog</a>
+                        <a class="nav-item nav-link" href="events.html">Events</a>
+                        <a class="nav-item nav-link btn btn-raised" href="challenges.html"
+                            id="btn-signup">Challenges</a>
                     </div>
                 </div>
             </div>
         </nav>
         <div class="container my-3 py-5">
             <h1 class="display-1 text-white">Solve Young,<br>Solve <span id="typed"></span>.</h1>
-            <a class="btn btn-raised btn-lg" href="#" id="btn-started">Let's Get Started</a>
+            <a class="btn btn-raised btn-lg" href="challenges.html" id="btn-started">Let's Get Started</a>
         </div>
     </div>
 
@@ -74,12 +78,10 @@
                     youth to further decentralize the research and innovative purposes of traditional academia. Learners
                     shouldn’t have to continue processing information to achieve
                     standardized validation; instead, we must bring up the idea-to-impact ratio in education.</p>
-                <a class="btn btn-raised btn-lg mt-5" href="#" id="btn-sign">Read More</a>
+                <a class="btn btn-raised btn-lg mt-5" href="mission.html" id="btn-sign">Read More</a>
             </div>
             <div class="col-6 p-0 m-0">
-                <img width="100%"
-                    src="images/Collated front.jpg"
-                    alt="section-immage">
+                <img width="100%" src="images/Collated front.jpg" alt="section-immage">
             </div>
         </div>
     </section>
@@ -158,27 +160,18 @@
         </div>
     </section>
 
-    <section class="container">
+    <section class="container mb-5">
         <h1 class="display-2 section-heading-light">Join the movement</h1>
-        <hr>
-        <form class="my-5">
-            <div class="row form-group px-3">
-                <div class="col-6 py-3">
-                    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="First Name">
-                </div>
-                <div class="col-6 py-3">
-                    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Last Name">
-                </div>
+        <form class="row" id="join-form">
+            <div class="form-group pl-0 bmd-form-group col-6">
+                <label for="name" class="bmd-label-floating">Full Name</label>
+                <input type="text" class="form-control" id="name">
             </div>
-            <div class="form-group px-3 py-3">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
+            <div class="form-group pl-0 bmd-form-group col-6">
+                <label for="email" class="bmd-label-floating">Email Address</label>
+                <input type="email" class="form-control" id="email">
             </div>
-            <button type="submit" class="btn btn-primary py-3">Submit</button>
+            <button type="submit" class="btn btn-raised mt-5 btn-submit">Submit</button>
         </form>
     </section>
 
@@ -194,8 +187,7 @@
                         Sustainable Development goals, the promotion of open innovation, and
                         the virtual connection of the knowledge systems in society.
                     </p>
-                    <div class="social">
-                        <!--Links to four of our Social Media accounts. Through Social Media users can reach us quickly and also keep updated with new features and promotional offers we post online-->
+                    <!-- <div class="social">
                         <a href="https://facebook.com/paolettis.kitchen.7" class="sociallogo" target="_blank"
                             style="padding-left: 0"><img src="https://png.icons8.com/ios/36/ffffff/facebook.png"
                                 alt="Facebook Logo"
@@ -214,7 +206,7 @@
                                 src="https://png.icons8.com/ios/36/ffffff/youtube-play.png" alt="Instagram Logo"
                                 onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/youtube-play.png'"
                                 onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/youtube-play.png'"></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-3">
                     <div class="links mt-3 ml-3">
@@ -222,10 +214,11 @@
                             <hr class="bg-white mt-4">
                             <ul class="mt-4 px-0">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="index.html">About</a></li>
-                                <li><a href="index.html">iWorld</a></li>
-                                <li><a href="index.html">Blog</a></li>
-                                <li><a href="index.html">Members</a></li>
+                                <li><a href="team.html">Meet the Team</a></li>
+                                <li><a href="mission.html">Our Mission</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="challenges.html">Challenges</a></li>
                             </ul>
                     </div>
                 </div>
@@ -237,17 +230,23 @@
                             <p><i class="material-icons">home</i>&nbsp; 1234 N Random St, AZ 12345</p>
                         </li> -->
                         <li>
-                            <p><i class="material-icons">email</i>&nbsp; <a href="mailto:">email@gmail.com</a></p>
+                            <p><i class="material-icons">email</i>&nbsp; <a href="mailto:">collatedlab@gmail.com</a></p>
                         </li>
-                        <li>
+                        <!-- <li>
                             <p><i class="material-icons">call</i>&nbsp; <a href="mailto:">+1 (234) 456-7890</a></p>
+                        </li> -->
+                        <li>
+                            <p><img src="https://png.icons8.com/ios/24/ffffff/instagram-new.png" alt="Instagram Logo" style="padding-left: 0;">
+                                &nbsp;
+                                <a href="https://www.instagram.com/collatedlab/">@collatedlab</a>
+                            </p>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <div class="container-fluid footer-bottom bg-info">
+    <div class="container-fluid footer-bottom">
         <div class="container text-center text-white">
             © 2019 CollatEd
         </div>
@@ -277,6 +276,46 @@
             backSpeed: 60,
             typeSpeed: 60
         });
+    </script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBDulXsaEQdMDC-VmEgCeC0gH2IFsytB8M",
+            authDomain: "collatedlab-97dc3.firebaseapp.com",
+            databaseURL: "https://collatedlab-97dc3.firebaseio.com",
+            projectId: "collatedlab-97dc3",
+            storageBucket: "collatedlab-97dc3.appspot.com",
+            messagingSenderId: "1060213815598",
+            appId: "1:1060213815598:web:f68a5f39e255eb31"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+
+    <script>
+        const joinForm = document.querySelector("#join-form");
+
+        joinForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (joinForm.name.value == "" || joinForm.email.value == "") {
+                alert("Please fill all fields!")
+                return false;
+            }
+
+            db.collection('users').add({
+                name: joinForm.name.value,
+                email: joinForm.email.value
+            });
+
+            joinForm.reset();
+            alert("Thanks for signing up!");
+        });
+
     </script>
 </body>
 

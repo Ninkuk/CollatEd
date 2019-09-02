@@ -49,8 +49,8 @@
                                 <a class="dropdown-item" href="mission.html">Our Mission</a>
                             </div>
                         </div>
-                        <a class="nav-item nav-link" href="about.html">iWorld</a>
-                        <a class="nav-item nav-link" href="about.html">Blog</a>
+                        <a class="nav-item nav-link" href="blog.html">Blog</a>
+                        <a class="nav-item nav-link" href="events.html">Events</a>
                         <a class="nav-item nav-link btn btn-raised" href="challenges.html"
                             id="btn-signup">Challenges</a>
                     </div>
@@ -59,6 +59,19 @@
         </nav>
         <div class="container my-3 py-5">
             <h1 class="display-1 text-white text-center">Challenges</h1>
+            <div class="row mt-5">
+                <h4 class="display-4 text-white col-7 px-0 mt-0 text-right">I would like to submit a </h4>
+                <div id="dropdown-div" class="dropdown col-5 px-0">
+                    <button id="dropdown-btn" class="btn btn-secondary dropdown-toggle py-0 my-0" type="button"
+                        id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <h4 id="dropdown-selected" class="my-0 text-white display-4">Challenge</h4>
+                        <div id="underline-dropdown"></div>
+                    </button>
+                    <div class="dropdown-menu ml-3" aria-labelledby="dropdownMenuLink">
+                        <a id="option" class="dropdown-item" onclick="toggleHiw()">policy for iWorld</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -138,22 +151,66 @@
             <div class="form-group m-0 bmd-form-group">
                 <label for="problemDescription" class="bmd-label-floating">Description of problem*</label>
                 <textarea class="form-control" id="problemDescription" rows="5"></textarea>
+                <span class="bmd-help">Please input a paragraph-length description of the status quo, including
+                    statistics if necessary.</span>
             </div>
             <div class="form-group m-0 bmd-form-group">
                 <label for="organizationDescription" class="bmd-label-floating">Description of organization
                     (optional)</label>
                 <textarea class="form-control" id="organizationDescription" rows="5"></textarea>
+                <span class="bmd-help">Tell students any relevant facts about your organization for promotional
+                    purposes.</span>
             </div>
             <div class="form-group m-0 bmd-form-group">
                 <label for="guidelinesDescription" class="bmd-label-floating">Guidelines and Limits*</label>
                 <textarea class="form-control" id="guidelinesDescription" rows="5"></textarea>
+                <span class="bmd-help">Indicate if this project requires any tools or specific format; please make your
+                    guidelines as broad as possible to encourage creative thinking.</span>
             </div>
             <div class="form-group m-0 bmd-form-group">
                 <label for="resources" class="bmd-label-floating">Resources*</label>
                 <textarea class="form-control" id="resources" rows="5"></textarea>
+                <span class="bmd-help">Any relevant links that may help the student solve the challenge.</span>
             </div>
             <p class="mt-5 text-muted">*required fields</p>
-            <button type="submit" class="btn btn-raised mt-5" id="btn-submit">Submit</button>
+            <button type="submit" class="btn btn-raised mt-5 btn-submit">Submit</button>
+        </form>
+
+        <form id="iworld-form">
+            <h1 class="display-4 section-heading-light">Submit a policy for iWorld</h1>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="namePolicy" class="bmd-label-floating">Name of Policy*</label>
+                <input type="text" class="form-control" id="namePolicy">
+            </div>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="policyDescription" class="bmd-label-floating">Description of policy*</label>
+                <textarea class="form-control" id="policyDescription" rows="5"></textarea>
+                <span class="bmd-help">Country and region it affects, specific action it look, etc.</span>
+            </div>
+            <div class="dropdown mt-4 row">
+                <p class="col-4 pr-0 mb-0 pt-1 dropdown-title">Status*:</p>
+                <button class="btn btn-secondary dropdown-toggle col-8 pl-0 dropdownMenuButton" type="button"
+                    id="status-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a status
+                </button>
+                <div class="dropdown-menu" aria-labelledby="status-button">
+                    <a class="dropdown-item" onclick="selectStatus('In-Progress')">In-Progress</a>
+                    <a class="dropdown-item" onclick="selectStatus('Passed')">Passed</a>
+                </div>
+            </div>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="relevance" class="bmd-label-floating">Relevance to students*</label>
+                <textarea class="form-control" id="relevance" rows="5"></textarea>
+                <span class="bmd-help">How is this policy valuable for students to examine and possibly contest?</span>
+            </div>
+            <div class="form-group m-0 bmd-form-group">
+                <label for="resourcesIworld" class="bmd-label-floating">Resources (Optional)</label>
+                <textarea class="form-control" id="resourcesIworld" rows="5"></textarea>
+                <span class="bmd-help">Any relevant contacts that students may reach out to, or suggested action for
+                    further engagement</span>
+            </div>
+            <p class="mt-5 text-muted">*required fields</p>
+            <button type="submit" class="btn btn-raised mt-5 btn-submit">Submit</button>
         </form>
 
         <div id="thanks-message" class="text-center">
@@ -177,27 +234,26 @@
                         Sustainable Development goals, the promotion of open innovation, and
                         the virtual connection of the knowledge systems in society.
                     </p>
-                    <div class="social">
-                        <!--Links to four of our Social Media accounts. Through Social Media users can reach us quickly and also keep updated with new features and promotional offers we post online-->
-                        <a href="https://facebook.com/paolettis.kitchen.7" class="sociallogo" target="_blank"
-                            style="padding-left: 0"><img src="https://png.icons8.com/ios/36/ffffff/facebook.png"
-                                alt="Facebook Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/facebook.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/facebook.png'"></a>
-                        <a href="https://twitter.com/KitchenPaoletti" class="sociallogo" target="_blank"><img
-                                src="https://png.icons8.com/ios/36/ffffff/twitter.png" alt="Twitter Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/twitter.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/twitter.png'"></a>
-                        <a href="https://www.instagram.com/collatedlab/" class="sociallogo" target="_blank"><img
-                                src="https://png.icons8.com/ios/36/ffffff/instagram-new.png" alt="Instagram Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/instagram-new.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/instagram-new.png'"></a>
-                        <a href="https://www.youtube.com/channel/UCetr1ndjTt4md80vra10YCQ?sub_confirmation=1"
-                            class="sociallogo" target="_blank"><img
-                                src="https://png.icons8.com/ios/36/ffffff/youtube-play.png" alt="Instagram Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/youtube-play.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/youtube-play.png'"></a>
-                    </div>
+                    <!-- <div class="social">
+                            <a href="https://facebook.com/paolettis.kitchen.7" class="sociallogo" target="_blank"
+                                style="padding-left: 0"><img src="https://png.icons8.com/ios/36/ffffff/facebook.png"
+                                    alt="Facebook Logo"
+                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/facebook.png'"
+                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/facebook.png'"></a>
+                            <a href="https://twitter.com/KitchenPaoletti" class="sociallogo" target="_blank"><img
+                                    src="https://png.icons8.com/ios/36/ffffff/twitter.png" alt="Twitter Logo"
+                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/twitter.png'"
+                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/twitter.png'"></a>
+                            <a href="https://www.instagram.com/collatedlab/" class="sociallogo" target="_blank"><img
+                                    src="https://png.icons8.com/ios/36/ffffff/instagram-new.png" alt="Instagram Logo"
+                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/instagram-new.png'"
+                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/instagram-new.png'"></a>
+                            <a href="https://www.youtube.com/channel/UCetr1ndjTt4md80vra10YCQ?sub_confirmation=1"
+                                class="sociallogo" target="_blank"><img
+                                    src="https://png.icons8.com/ios/36/ffffff/youtube-play.png" alt="Instagram Logo"
+                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/youtube-play.png'"
+                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/youtube-play.png'"></a>
+                        </div> -->
                 </div>
                 <div class="col-3">
                     <div class="links mt-3 ml-3">
@@ -205,10 +261,11 @@
                             <hr class="bg-white mt-4">
                             <ul class="mt-4 px-0">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="index.html">About</a></li>
-                                <li><a href="index.html">iWorld</a></li>
-                                <li><a href="index.html">Blog</a></li>
-                                <li><a href="index.html">Members</a></li>
+                                <li><a href="team.html">Meet the Team</a></li>
+                                <li><a href="mission.html">Our Mission</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="challenges.html">Challenges</a></li>
                             </ul>
                     </div>
                 </div>
@@ -217,20 +274,27 @@
                     <hr class="bg-white mt-4">
                     <ul class="mt-4 px-0 text-white">
                         <!-- <li>
-                            <p><i class="material-icons">home</i>&nbsp; 1234 N Random St, AZ 12345</p>
-                        </li> -->
+                                <p><i class="material-icons">home</i>&nbsp; 1234 N Random St, AZ 12345</p>
+                            </li> -->
                         <li>
-                            <p><i class="material-icons">email</i>&nbsp; <a href="mailto:">email@gmail.com</a></p>
+                            <p><i class="material-icons">email</i>&nbsp; <a href="mailto:">collatedlab@gmail.com</a></p>
                         </li>
+                        <!-- <li>
+                                <p><i class="material-icons">call</i>&nbsp; <a href="mailto:">+1 (234) 456-7890</a></p>
+                            </li> -->
                         <li>
-                            <p><i class="material-icons">call</i>&nbsp; <a href="mailto:">+1 (234) 456-7890</a></p>
+                            <p><img src="https://png.icons8.com/ios/24/ffffff/instagram-new.png" alt="Instagram Logo"
+                                    style="padding-left: 0;">
+                                &nbsp;
+                                <a href="https://www.instagram.com/collatedlab/">@collatedlab</a>
+                            </p>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <div class="container-fluid footer-bottom bg-info">
+    <div class="container-fluid footer-bottom">
         <div class="container text-center text-white">
             © 2019 CollatEd
         </div>
@@ -274,7 +338,7 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
     </script>
-    <script src="js/form.js"></script>
+    <script src="js/challengeForm.js"></script>
 </body>
 
 </html>

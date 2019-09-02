@@ -48,10 +48,16 @@ body {
     margin-left: 10px;
     background-color: #FF9800;
     color: #ffffff;
+    text-transform: none;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
 }
 
-#btn-submit {
+#btn-signup:hover {
+    background-color: #ffffff;
+    color: #FF9800 !important;
+}
+
+.btn-submit {
     border-radius: 5px;
     padding: 10px 15px;
     background-color: #FF9800;
@@ -60,19 +66,37 @@ body {
     font-size: 100%;
 }
 
+.btn-submit:hover{
+    background-color: #FF9800;
+    color: #ffffff;
+}
+
 #btn-started {
     padding: 15px 30px;
     margin-top: 15px;
     margin-bottom: 50px;
-    border-radius: 0px;
+    border-radius: 5px;
     color: white;
-    background: #1c7dff;
+    background: #FF9800;
     text-transform: none;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
 }
 
 #btn-started:hover {
-    color: #1c7dff;
+    color: #FF9800;
+    background: white;
+}
+
+#btn-sign {
+    border-radius: 5px;
+    color: white;
+    background: #FF9800;
+    text-transform: none;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
+}
+
+#btn-sign:hover {
+    color: #FF9800;
     background: white;
 }
 
@@ -161,19 +185,6 @@ body {
     }
 }
 
-#btn-sign {
-    border-radius: 0px;
-    color: white;
-    background: #1c7dff;
-    text-transform: none;
-    box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
-}
-
-#btn-sign:hover {
-    color: #1c7dff;
-    background: white;
-}
-
 #graph {
     position: relative;
     top: 20%;
@@ -185,6 +196,7 @@ section {
 
 #section-2 {
     background-color: #1d58a6;
+    border-radius: 5px;
 }
 
 .section-heading-light {
@@ -235,16 +247,38 @@ section {
     color: #FF9800;
 }
 
-.dropdown-title{
-    color: rgba(0,0,0,.26);
+.dropdown-title {
+    color: rgba(0, 0, 0, .26);
 }
 
-.dropdownMenuButton{
+.dropdownMenuButton {
     text-align: left;
 }
 
-.dropdown-menu .dropdown-item{
+.dropdown-menu .dropdown-item {
     max-width: 500px;
+}
+
+#dropdown-btn {
+    text-transform: none;
+}
+
+#dropdown-btn:hover {
+    background: none;
+}
+
+#underline-dropdown {
+    height: 5px;
+    background-color: #ffffff;
+}
+
+#iworld-form {
+    display: none;
+}
+
+.team-profile-images {
+    width: 100%;
+    ;
 }
 
 footer {

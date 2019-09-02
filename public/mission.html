@@ -36,11 +36,19 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="mainNav">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="about.html">About</a>
-                        <a class="nav-item nav-link" href="about.html">iWorld</a>
-                        <a class="nav-item nav-link" href="about.html">Blog</a>
-                        <a class="nav-item nav-link btn btn-raised" href="#" id="btn-signup" data-toggle="modal"
-                            data-target="#authModal">Members</a>
+                        <!-- <a class="nav-item nav-link" href="about.html">About</a> -->
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">About</a>
+                            <div class="dropdown-menu" id="dropdown-nav">
+                                <a class="dropdown-item" href="team.html">Meet the team</a>
+                                <a class="dropdown-item" href="mission.html">Our Mission</a>
+                            </div>
+                        </div>
+                        <a class="nav-item nav-link" href="blog.html">Blog</a>
+                        <a class="nav-item nav-link" href="events.html">Events</a>
+                        <a class="nav-item nav-link btn btn-raised" href="challenges.html"
+                            id="btn-signup">Challenges</a>
                     </div>
                 </div>
             </div>
@@ -62,47 +70,59 @@
             UN’s Sustainable Development Goals.</p>
     </section>
 
-    <section class="container">
-        <h1 class="display-3 section-heading-light">Core Product: CollatEd Challenges™</h1>
-        <hr>
-        <p class="lead">
-            Civil society, policymakers, students, and industry professionals from a variety of fields related to global
-            problems are invited to create challenges based on their area of social impact for students. An example of a
-            challenge headline (Full submission form see Appendix):
-            Improving water quality in Southeast Asia through the engineering of a new filter product. (Global Health,
-            Water quality, Technology) || Associated disciplines: Engineering; quantitative research and data analysis;
-            environmental chemistry.
-            CollatEd writes its own software in a DIY format that automatically regroups and recommends ideas in its
-            database in the areas of interest to accelerate the delivery of open and flexible education systems that
-            enable equitable, relevant, lifelong learning opportunities in contribution to the SDG’s. The product in the
-            development process includes:
-        </p>
-    </section>
+    <section class="container-fluid text-white py-5" id="movement-section">
+        <div class="container">
+            <h1 class="display-3 section-heading-dark">Core Product: CollatEd Challenges™</h1>
+            <hr id="besthr">
+            <p class="lead">
+                Civil society, policymakers, students, and industry professionals from a variety of fields related to
+                global
+                problems are invited to create challenges based on their area of social impact for students. An example
+                of a
+                challenge headline (Full submission form see Appendix):
+                Improving water quality in Southeast Asia through the engineering of a new filter product. (Global
+                Health,
+                Water quality, Technology) || Associated disciplines: Engineering; quantitative research and data
+                analysis;
+                environmental chemistry.
+                CollatEd writes its own software in a DIY format that automatically regroups and recommends ideas in its
+                database in the areas of interest to accelerate the delivery of open and flexible education systems that
+                enable equitable, relevant, lifelong learning opportunities in contribution to the SDG’s. The product in
+                the
+                development process includes:
+            </p>
+        </div>
 
-    <section class="container pl-5">
-        <h3 class="display-4 section-heading-light">iWorld</h3>
-        <hr>
-        <p class="lead">A sub-platform featuring our work on education policy and policy-oriented contributor
-            submissions, with the goal of forming the world’s largest student-led education policy network. By
-            responding to policy and simulating the impact, either through ideas crossed over from Challenges, students
-            form a productive dialogue that becomes valuable feedback for centralized decision-making bodies.
-            <a href="iworld.html">Learn More</a></p>
-        <h3 class="display-4 section-heading-light mt-5">HUBs for DIY</h3>
-        <hr>
-        <p class="lead">Once students complete their Innovator Profile and select a Challenge, they join a team
-            automatically selected based on matching of profiles. The chat space is connected to a desktop idea-design
-            toolbox to inspire their projects. The desktop supports an experimental mode of music-remixing-inspired
-            innovation. It takes multidimensional features of existing ideas initialized to examples of innovation.
-            Machine learning incorporates past projects contributors uploaded over time, so that users can opt to start
-            the innovation from remix results or from blank.</p>
+        <div class="container pl-5">
+            <h3 class="display-4 section-heading-dark">iWorld</h3>
+            <hr>
+            <p class="lead">A sub-platform featuring our work on education policy and policy-oriented contributor
+                submissions, with the goal of forming the world’s largest student-led education policy network. By
+                responding to policy and simulating the impact, either through ideas crossed over from Challenges,
+                students
+                form a productive dialogue that becomes valuable feedback for centralized decision-making bodies.
+                <a href="iworld.html">Learn More</a></p>
+            <h3 class="display-4 section-heading-dark mt-5">HUBs for DIY</h3>
+            <hr>
+            <p class="lead">Once students complete their Innovator Profile and select a Challenge, they join a team
+                automatically selected based on matching of profiles. The chat space is connected to a desktop
+                idea-design
+                toolbox to inspire their projects. The desktop supports an experimental mode of music-remixing-inspired
+                innovation. It takes multidimensional features of existing ideas initialized to examples of innovation.
+                Machine learning incorporates past projects contributors uploaded over time, so that users can opt to
+                start
+                the innovation from remix results or from blank.</p>
 
-        <h3 class="display-4 section-heading-light mt-5">Implementation track and Data/Research Exchange</h3>
-        <hr>
-        <p class="lead">After submission and evaluation, students can decide what to do with their accomplishment, in
-            collaboration with the contributor if listed as such, via a page with interactive guides for
-            entrepreneurship or portfolio or social activism. If used in a classroom, teachers can designate the action
-            that want to take. Meanwhile, CollatEd prepares these results into reports that inform the UNESCO Global
-            Action Programme’s work.</p>
+            <h3 class="display-4 section-heading-dark mt-5">Implementation track and Data/Research Exchange</h3>
+            <hr>
+            <p class="lead">After submission and evaluation, students can decide what to do with their accomplishment,
+                in
+                collaboration with the contributor if listed as such, via a page with interactive guides for
+                entrepreneurship or portfolio or social activism. If used in a classroom, teachers can designate the
+                action
+                that want to take. Meanwhile, CollatEd prepares these results into reports that inform the UNESCO Global
+                Action Programme’s work.</p>
+        </div>
     </section>
 
     <section class="container">
@@ -136,7 +156,7 @@
         </div>
     </section>
 
-    <section class="container">
+    <section class="container mb-5">
         <h1 class="display-3 section-heading-light">Projected Global Impact</h1>
         <hr>
         <p class="lead">
@@ -169,27 +189,26 @@
                         Sustainable Development goals, the promotion of open innovation, and
                         the virtual connection of the knowledge systems in society.
                     </p>
-                    <div class="social">
-                        <!--Links to four of our Social Media accounts. Through Social Media users can reach us quickly and also keep updated with new features and promotional offers we post online-->
-                        <a href="https://facebook.com/paolettis.kitchen.7" class="sociallogo" target="_blank"
-                            style="padding-left: 0"><img src="https://png.icons8.com/ios/36/ffffff/facebook.png"
-                                alt="Facebook Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/facebook.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/facebook.png'"></a>
-                        <a href="https://twitter.com/KitchenPaoletti" class="sociallogo" target="_blank"><img
-                                src="https://png.icons8.com/ios/36/ffffff/twitter.png" alt="Twitter Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/twitter.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/twitter.png'"></a>
-                        <a href="https://www.instagram.com/collatedlab/" class="sociallogo" target="_blank"><img
-                                src="https://png.icons8.com/ios/36/ffffff/instagram-new.png" alt="Instagram Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/instagram-new.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/instagram-new.png'"></a>
-                        <a href="https://www.youtube.com/channel/UCetr1ndjTt4md80vra10YCQ?sub_confirmation=1"
-                            class="sociallogo" target="_blank"><img
-                                src="https://png.icons8.com/ios/36/ffffff/youtube-play.png" alt="Instagram Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/youtube-play.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/youtube-play.png'"></a>
-                    </div>
+                    <!-- <div class="social">
+                            <a href="https://facebook.com/paolettis.kitchen.7" class="sociallogo" target="_blank"
+                                style="padding-left: 0"><img src="https://png.icons8.com/ios/36/ffffff/facebook.png"
+                                    alt="Facebook Logo"
+                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/facebook.png'"
+                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/facebook.png'"></a>
+                            <a href="https://twitter.com/KitchenPaoletti" class="sociallogo" target="_blank"><img
+                                    src="https://png.icons8.com/ios/36/ffffff/twitter.png" alt="Twitter Logo"
+                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/twitter.png'"
+                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/twitter.png'"></a>
+                            <a href="https://www.instagram.com/collatedlab/" class="sociallogo" target="_blank"><img
+                                    src="https://png.icons8.com/ios/36/ffffff/instagram-new.png" alt="Instagram Logo"
+                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/instagram-new.png'"
+                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/instagram-new.png'"></a>
+                            <a href="https://www.youtube.com/channel/UCetr1ndjTt4md80vra10YCQ?sub_confirmation=1"
+                                class="sociallogo" target="_blank"><img
+                                    src="https://png.icons8.com/ios/36/ffffff/youtube-play.png" alt="Instagram Logo"
+                                    onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/youtube-play.png'"
+                                    onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/youtube-play.png'"></a>
+                        </div> -->
                 </div>
                 <div class="col-3">
                     <div class="links mt-3 ml-3">
@@ -197,10 +216,11 @@
                             <hr class="bg-white mt-4">
                             <ul class="mt-4 px-0">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="index.html">About</a></li>
-                                <li><a href="index.html">iWorld</a></li>
-                                <li><a href="index.html">Blog</a></li>
-                                <li><a href="index.html">Members</a></li>
+                                <li><a href="team.html">Meet the Team</a></li>
+                                <li><a href="mission.html">Our Mission</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="challenges.html">Challenges</a></li>
                             </ul>
                     </div>
                 </div>
@@ -209,13 +229,20 @@
                     <hr class="bg-white mt-4">
                     <ul class="mt-4 px-0 text-white">
                         <!-- <li>
-                            <p><i class="material-icons">home</i>&nbsp; 1234 N Random St, AZ 12345</p>
-                        </li> -->
+                                <p><i class="material-icons">home</i>&nbsp; 1234 N Random St, AZ 12345</p>
+                            </li> -->
                         <li>
-                            <p><i class="material-icons">email</i>&nbsp; <a href="mailto:">email@gmail.com</a></p>
+                            <p><i class="material-icons">email</i>&nbsp; <a href="mailto:">collatedlab@gmail.com</a></p>
                         </li>
+                        <!-- <li>
+                                <p><i class="material-icons">call</i>&nbsp; <a href="mailto:">+1 (234) 456-7890</a></p>
+                            </li> -->
                         <li>
-                            <p><i class="material-icons">call</i>&nbsp; <a href="mailto:">+1 (234) 456-7890</a></p>
+                            <p><img src="https://png.icons8.com/ios/24/ffffff/instagram-new.png" alt="Instagram Logo"
+                                    style="padding-left: 0;">
+                                &nbsp;
+                                <a href="https://www.instagram.com/collatedlab/">@collatedlab</a>
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -227,6 +254,23 @@
             © 2019 CollatEd
         </div>
     </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('body').bootstrapMaterialDesign();
+        });
+    </script>
 </body>
 
 </html>
