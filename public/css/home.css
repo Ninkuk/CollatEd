@@ -87,7 +87,7 @@ body {
     background: white;
 }
 
-#btn-sign {
+.btn-orange {
     border-radius: 5px;
     color: white;
     background: #FF9800;
@@ -95,7 +95,7 @@ body {
     box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
 }
 
-#btn-sign:hover {
+.btn-orange:hover {
     color: #FF9800;
     background: white;
 }
