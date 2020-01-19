@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
     <!-- Material Design for Bootstrap fonts and icons -->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"> -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
@@ -47,12 +50,13 @@
                                 aria-haspopup="true" aria-expanded="false">About</a>
                             <div class="dropdown-menu" id="dropdown-nav">
                                 <a class="dropdown-item" href="team.html">Meet the team</a>
-                                <a class="dropdown-item" href="mission.html">Our Mission</a>
-                                <a class="dropdown-item" href="partners.html">Our Partners</a>
+                                <a class="dropdown-item" href="mission.html">Mission and Impact</a>
                             </div>
                         </div>
-                        <a class="nav-item nav-link" href="blog.html">Blog</a>
-                        <a class="nav-item nav-link" href="events.html">Events</a>
+                        <a class="nav-item nav-link" href="Global-Steering-Committee.html">Global Steering Committee</a>
+                        <a class="nav-item nav-link" href="partners.html">Our Partners</a>
+                        <a class="nav-item nav-link" href="Governmental-Pathways.html">Governmental Pathways</a>
+                        <a class="nav-item nav-link" href="events.html">UN Events</a>
                         <a class="nav-item nav-link btn btn-raised" href="challenges.html"
                             id="btn-signup">Challenges</a>
                     </div>
@@ -70,7 +74,8 @@
                         <div id="underline-dropdown"></div>
                     </button>
                     <div class="dropdown-menu ml-3" aria-labelledby="dropdownMenuLink">
-                        <a id="option" class="dropdown-item" onclick="toggleHiw()">policy for iWorld</a>
+                        <a id="option" class="dropdown-item" onclick="toggleHiw()">Policy for iWorld</a>
+                        <a id="option1" class="dropdown-item" onclick="toggleHiw()">Student Innovator App</a>
                     </div>
                 </div>
             </div>
@@ -230,46 +235,13 @@
                 <div class="col-lg-5 pr-5">
                     <img src="images/logo_light.png" alt="logo" id="foot-logo">
                     <hr class="bg-white mt-4">
-                    <p class="my-4 text-white">
-                        Welcome to the era of Massive Open Online Discovery (MOOD)! CollatEd is a worldwide education
-                        reform movement for Emerging Student Innovators, including the enforcement of UN Education
-                        Sustainable Development goals, the promotion of open innovation, and
-                        the virtual connection of the knowledge systems in society.
-                    </p>
-                    <!-- <div class="social">
-                        <a href="https://facebook.com/paolettis.kitchen.7" class="sociallogo" target="_blank"
-                            style="padding-left: 0"><img src="https://png.icons8.com/ios/36/ffffff/facebook.png"
-                                alt="Facebook Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/facebook.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/facebook.png'"></a>
-                        <a href="https://twitter.com/KitchenPaoletti" class="sociallogo" target="_blank"><img
-                                src="https://png.icons8.com/ios/36/ffffff/twitter.png" alt="Twitter Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/twitter.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/twitter.png'"></a>
-                        <a href="https://www.instagram.com/collatedlab/" class="sociallogo" target="_blank"><img
-                                src="https://png.icons8.com/ios/36/ffffff/instagram-new.png" alt="Instagram Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/instagram-new.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/instagram-new.png'"></a>
-                        <a href="https://www.youtube.com/channel/UCetr1ndjTt4md80vra10YCQ?sub_confirmation=1"
-                            class="sociallogo" target="_blank"><img
-                                src="https://png.icons8.com/ios/36/ffffff/youtube-play.png" alt="Instagram Logo"
-                                onmouseover="this.src='https://png.icons8.com/ios/36/FF9800/youtube-play.png'"
-                                onmouseout="this.src='https://png.icons8.com/ios/36/ffffff/youtube-play.png'"></a>
-                    </div> -->
+                    <p class="my-4 text-white" id="footer-text"></p>
                 </div>
                 <div class="col-lg-3">
                     <div class="links mt-5 mt-lg-3 ml-lg-3" id="navigation-menu">
                         <h3 class="text-white">Navigation</h1>
                             <hr class="bg-white mt-4">
-                            <ul class="mt-4 px-0">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="team.html">Meet the Team</a></li>
-                                <li><a href="mission.html">Our Mission</a></li>
-                                <li><a href="partners.html">Our Partners</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="events.html">Events</a></li>
-                                <li><a href="challenges.html">Challenges</a></li>
-                            </ul>
+                            <ul class="mt-4 px-0" id="footer-nav-links" />
                     </div>
                 </div>
                 <div class="col-lg-4 mt-5 mt-lg-3 pl-3 contact" id="contact">
@@ -307,14 +279,14 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
-        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
-        crossorigin="anonymous"></script>
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+    </script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
-        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
-        crossorigin="anonymous"></script>
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+    </script>
     <script>
         $(document).ready(function () {
             $('body').bootstrapMaterialDesign();
@@ -343,6 +315,7 @@
         const db = firebase.firestore();
     </script>
     <script src="js/challengeForm.js"></script>
+    <script src="js/text.js"></script>
 </body>
 
 </html>
